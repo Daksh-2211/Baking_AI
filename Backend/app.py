@@ -39,7 +39,7 @@ def clean_data(df):
 
 def load_recipes():
     try:
-        csv_path = r'C:\Users\dell\OneDrive\Desktop\ExtraClg_DATA\pbakingAI\recipes.csv'
+        csv_path = os.path.join(os.path.dirname(__file__), 'recipes.csv')
         if not os.path.exists(csv_path):
             raise FileNotFoundError(f"CSV file not found at: {csv_path}")
         
